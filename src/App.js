@@ -4,12 +4,12 @@ import BadgeContainer from './components/BadgeContainer';
 
 function App() {
 
-  const [setBadges] = useState([]);
+  const [badges, setBadges] = useState([]);
 
   useEffect(() => { 
     fetch("http://localhost:9393/badges")
     .then((r) => r.json())
-    .then(setBadges);
+    .then(console.log(setBadges));
   },[]);
 
   return (
