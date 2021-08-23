@@ -29,14 +29,24 @@ function App() {
     setBadges(updatedBadges);
   }
 
+  function handleDeleteBadge(badgeToDelete) {
+    const updatedBadges = badges.filter((badge) => badge.id !== badgeToDelete.id);
+    setBadges(updatedBadges);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        Merit Badge Tracker
-      </header>
-      <BadgeContainer />
-    </div>
+    <>
+      <Header />
+      {showForm ? <BadgeForm onAddBadge={handleAddBadge} /> : null}
+      <div>
+        <button onClick={handleClick}>Add a badge</button>
+      </div>
+      <BadgeContainer
+        badges={badges}
+        onDeleteBadge={handleDeleteBadge}
+        onUpdateBadge={handleUpdateBadge}
+      />
+    </>
   );
 }
-
 export default App;
