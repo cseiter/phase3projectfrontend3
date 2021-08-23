@@ -7,7 +7,7 @@ function BadgeCard({badge, onDeleteBadge, onUpdateBadge}) {
         fetch('http://localhost:9393/badges/${id}', {
             method: "DELETE",
         })
-        .then((r => r.json())
+        .then((r) => r.json())
         .then(() => {onDeleteBadge(badge);
         });
     }
