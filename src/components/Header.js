@@ -4,7 +4,7 @@ function Header() {
     return (
         <div>
             <img
-            src="https://www.clipartmax.com/png/small/120-1209481_what-kinds-of-activities-did-you-participate-in-as-boy-scouts-of.png"
+            src="https://retailobjects.scoutshop.org/media/catalog/product/cache/15846fcd7c7438adaa15ad763c45b358/4/8/489.jpg"
             alt="Eagle Scout Badge"
             />
         </div>
