@@ -12,7 +12,7 @@ function App() {
   useEffect(() => { 
     fetch("http://localhost:9393/badges")
     .then((r) => r.json())
-    .then(console.log(setBadges));
+    .then(setBadges);
   },[]);
 
   function handleClick() {
