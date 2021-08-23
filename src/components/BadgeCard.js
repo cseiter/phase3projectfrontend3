@@ -12,6 +12,10 @@ function BadgeCard({badge, onDeleteBadge, onUpdateBadge}) {
         });
     }
 
+    function handleEarnClick() {
+        const updateObj = {earned: badge.badges_is_earned = "yes",
+    };
+
 
 
 
