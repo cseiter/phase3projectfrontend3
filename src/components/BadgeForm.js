@@ -28,6 +28,7 @@ function BadgeForm({onAddBadge}) {
             body: JSON.stringify(newBadge),
         })
         .then((r) => r.json())
+        .then(console.log(newBadge))
         .then(onAddBadge);
     }
 
