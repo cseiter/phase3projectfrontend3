@@ -26,16 +26,15 @@ function BadgeCard({badge, onDeleteBadge, onUpdateBadge}) {
         .then(onUpdateBadge);
     }
 
-
-
-
-
-
-
-
-
-
-
-};
+    return (
+        <div>
+            <h2>{badges_name}</h2>
+            <p>For Eagle? {badges_is_eagle}</p>
+            <p>Earned? {badges_is_earned}</p>
+            <button onClick={handleEarnClick}>Mark as earned</button>
+            <button onClick={handleDeleteClick}>Delete badge</button>
+        </div>
+        );
+    };
 
 export default BadgeCard;
