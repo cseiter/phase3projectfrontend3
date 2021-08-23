@@ -1,6 +1,16 @@
 import React from 'react'
 
-function BadgeCard() {
+function BadgeCard({badge, onDeleteBadge, onUpdateBadge}) {
+    const {id, badges_name, badges_is_earned, badges_is_eagle} = badge;
+
+    function handleDeleteClick() {
+        fetch('http://localhost:9393/badges/${id}', {
+            method: "DELETE",
+        })
+        .then((r => r.json())
+        .then(() => {onDeleteBadge(badge);
+        });
+    }
 
 
 
@@ -12,7 +22,8 @@ function BadgeCard() {
 
 
 
-    
+
+
 };
 
 export default BadgeCard;
