@@ -15,6 +15,22 @@ function BadgeForm({onAddBadge}) {
         });
     }
 
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        const newBadge = {...formData};
+
+        fetch("http://localhost:9393/badges", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newBadge),
+        })
+        .then((r) => r.json())
+        .then(onAddBadge);
+    }
+
 
 
 
